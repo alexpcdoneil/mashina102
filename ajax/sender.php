@@ -3,13 +3,12 @@
 $name = $_POST['name'];
 $carModel = $_POST['carModel'];
 $creationYear = $_POST['creationYear'];
-$carMileage = $_POST['carMileage'];
+$carMileage = isset($_POST['carMileage']) ?? '-';
 $gearbox = $_POST['gearbox'];
 $problem = $_POST['problem'];
 $carLocation = $_POST['carLocation'];
-$expectedAmount = $_POST['expectedAmount'];
+$expectedAmount = isset($_POST['expectedAmount']) ?? '-';
 $phone = $_POST['phone'];
-$name = $_POST['name'];
 
 $subject = "Письмо от клиента с сайта"; 
 
@@ -25,6 +24,10 @@ $msg = "Имя клиента: $name\n".
     "Желаемая сумма: $expectedAmount\n".
     "Телефон для связи: $phone";
 
-mail($to, $subject, $msg);
+if (mail($to, $subject, $msg)) {
+    echo "Сообщение отправлено!";
+} else {
+    echo "Произошла ошибка при отправке сообщения.";
+}
 
 ?>

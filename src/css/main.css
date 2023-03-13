@@ -1,0 +1,708 @@
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul, ol, li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+html, body {
+  line-height: 1;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-size: 0.75rem;
+  color: #000;
+}
+/* ----------------------------- */
+.wrapper {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+/* ----------------------------- */
+.button a, .button button {
+  display: inline-block;
+  border-radius: 25px;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 20px 60px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.button-green {
+  background-color: #7ec401;
+}
+.button-blue {
+  background-color: #02387e;
+}
+/* ----------------------------- */
+
+[class*="__container"] {
+  max-width: 1200px;
+  margin: 0px auto;
+}
+
+.header {
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  max-height: 80px;
+  background-color: #fff;
+  box-shadow: 0px 1px 6px #c7c6c6;
+}
+.header__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding: 0 20px;
+  color: #000;
+}
+.header__logo {
+  display: flex;
+}
+.header__logo-img {
+  width: 95px;
+}
+.header__logo-text {
+  width: 190px;
+}
+@media (max-width: 768px) {
+  .header__logo-text {
+    width: 180px;
+  }
+}
+@media (max-width: 768px) {
+  .header__img_mobile-display_none {
+    display: none;
+  }
+}
+.header__contacts {
+  text-align: right;
+}
+.contacts {
+  line-height: 1.2;
+  font-weight: 600;
+}
+.contacts__phone {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.25rem;
+}
+.contacts__phone img {
+  width: 21px;
+  height: 21px;
+}
+.contacts__phone a {
+  color: inherit;
+  padding-left: 5px;
+}
+.contacts__location {
+  margin-top: 5px;
+  font-size: 0.8rem;
+}
+.contacts__social-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+.contacts__social-link {
+  cursor: pointer;
+}
+.contacts__social-link img {
+  width: 50px;
+}
+.contacts__social-link img:hover {
+  opacity: 0.7;
+  transition: all 300ms;
+}
+
+
+/* ------------------------------------------------ */
+
+.main {
+  flex: 1 1 auto;
+}
+
+/* ------------------------------------------------ */
+
+.car-buyback {
+  background: url('../../public/bg-main.png') no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+}
+.car-buyback__container {
+  padding: 115px 20px 30px;
+  height: 100%;
+}
+.car-buyback__info {
+  display: flex;
+  flex-direction: column;
+}
+.car-buyback__title {
+  max-width: 760px;
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1.23;
+  color: #fff;
+}
+.car-buyback__text {
+  max-width: 760px;
+  padding: 40px 0;
+  font-size: 1.375rem;
+  line-height: 1.55;
+  color: #fff;
+}
+.car-buyback__button a {
+  background-color: #7ec401;
+}
+.car-buyback__description {
+  margin-top: 40px;
+}
+.description-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.description-item {
+  color: #fff;
+}
+.description-item__icon img {
+  color: #fff;
+}
+.description-item__title {
+  font-size: 1.375rem;
+  line-height: 1.35;
+  font-weight: 600;
+}
+.description-item__title::before {
+  content: url("../../public/checkmarkcircle.svg");
+  color: #fff;
+  margin-right: 15px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.description-item__text {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  line-height: 1.55;
+}
+
+/* ------------------------------------------------ */
+
+.offer__card {
+  margin: 85px 40px 0 40px;
+  padding: 40px 80px;
+  border-radius: 25px;
+  min-height: 397px;
+  background: url("../../public/bg-percent-2.png") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.card {
+  color: #fff;
+}
+.card__title {
+  font-size: 2.625rem;
+  font-weight: 600;
+  line-height: 1.23;
+}
+.card__text {
+  padding-top: 40px;
+  font-size: 1.375rem;
+  line-height: 1.55;
+}
+.offer__container {
+  padding: 0 55px;
+}
+.offer__advantages-list {
+  margin-top: 60px;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(2, 1fr);
+}
+.offer__advantages-item {
+  display: flex;
+  gap: 20px;
+}
+.offer__advantages-image img {
+  width: 150px;
+  height: 150px;
+}
+.offer__advantages-title {
+  font-size: 1.5rem;
+  line-height: 1.35;
+  font-weight: 600;
+  padding-bottom: 8px;
+  color: #013a81;
+}
+.offer__advantages-text {
+  font-size: 1.3rem;
+  line-height: 1.55;
+}
+.offer__leave-request {
+  margin-top: 60px;
+}
+.leave-request {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.leave-request__text {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+.leave-request__button {
+  margin-left: 15px;
+}
+
+/* ------------------------------------------------ */
+
+.invite-offer {
+  position: relative;
+  z-index: 1;
+  background: url("../../public/bg_invite_friend.webp") no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 155px 42px;
+}
+.invite-offer::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  width: 100%;
+  background: #000;
+  opacity: 0.55;
+}
+.invite-offer__container {
+  position: relative;
+  color: #fff;
+}
+.invite-offer__title {
+  font-size: 2.625rem;
+  font-weight: 600;
+  line-height: 1.23;
+}
+.invite-offer__text {
+  margin: 60px 0;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+/* ------------------------------------------------ */
+
+.trade-in {
+  margin-top: 40px;
+}
+.trade-in__container {
+  padding: 0 20px;
+}
+.trade-in__title {
+  font-size: 2.625rem;
+  font-weight: 600;
+  line-height: 1.23;
+}
+.trade-in__text {
+  margin: 40px 0 45px;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  max-width: 560px;
+}
+.trade-in__slider {
+  margin: 0 auto;
+}
+.trade-in__leave-request {
+  margin: 30px 0;
+}
+
+/* ------------------------------------------------ */
+
+.price-info {
+  background: url("../../public/img_coins.png") no-repeat;
+  background-size: cover;
+  padding: 150px;
+}
+.price-info__block {
+  margin: 0 auto;
+  max-width: 760px;
+  padding: 80px 60px;
+  background-color: #fff;
+}
+.price-info__title {
+  font-size: 2.625rem;
+  font-weight: 600;
+  line-height: 1.23;
+
+}
+.price-info__text {
+  font-size: 1.25rem;
+  line-height: 1.55;
+  margin-top: 40px;
+}
+.price-info__text p:not(:first-child) {
+  padding-top: 20px;
+}
+
+/* ------------------------------------------------ */
+
+.documents {
+  background-image: linear-gradient(180deg, rgba(31, 111, 255, 0.75), rgba(31, 111, 255, 0.75)), url("../../public/bg_document.webp");
+  background-position: 0px 0px, 50% 50%;
+  background-size: auto, cover;
+  background-repeat: repeat, no-repeat;
+  background-attachment: scroll, fixed;
+  padding: 80px 0;
+}
+.documents__container {
+  padding: 0 20px;
+  color: #fff;
+}
+.documents__title {
+  font-size: 2.625rem;
+  font-weight: 600;
+  line-height: 1.23;
+  margin-bottom: 50px;
+}
+.documents__document-list {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 35px;
+  border: 2px dotted #fff;
+  border-radius: 5px;
+  background-color: rgba(31, 111, 255, 0.89);
+  box-shadow: 4px 4px 15px 5px rgb(8 30 70 / 25%);
+  font-size: 1.25rem;
+  line-height: 1.55;
+  margin-top: 40px;
+}
+.documents__document-item {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.documents__document-item:not(:first-child) {
+  margin-top: 20px;
+}
+.documents__img img {
+  width: 60px;
+  height: 60px;
+}
+/* ------------------------------------------------ */
+
+.car-estimate {
+  position: relative;
+  background: url("../../public/img_girl_with_cars.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 1;
+  color: #fff;
+}
+.car-estimate::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  width: 100%;
+  background: rgba(0,0,0,.7);
+}
+.car-estimate__container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  max-width: 660px;
+  padding: 160px 20px;
+  font-size: 1.25rem;
+  line-height: 1.55;
+}
+.car-estimate__title {
+  font-size: 2.625rem;
+  font-weight: 600;
+  line-height: 1.23;
+}
+.car-estimate__text {
+  margin: 40px 0 50px 0;
+}
+.car-estimate__form {
+  width: 100%;
+  margin: 0 auto;
+  text-align: start;
+}
+.estimate-form__field {
+  margin-bottom: 20px;
+}
+.estimate-form__label {
+  padding: 0 10px 5px 0;
+}
+.estimate-form__input input,
+.estimate-form__select select {
+  display: inline-block;
+  min-width: 100%;
+  height: 56px;
+  border-radius: 25px;
+  padding: 0 20px;
+  font-size: 1rem;
+  line-height: 1.33;
+}
+.estimate-form__select {
+  position: relative;
+}
+.estimate-form__select select {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+}
+.estimate-form__select select::-ms-expand {
+	display: none;
+}
+.estimate-form__select:after {
+  content: ' ';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px 5px 0 5px;
+  border-color: #000 transparent transparent transparent;
+  position: absolute;
+  right: 20px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  pointer-events: none;
+}
+.estimate-form__submit {
+  display: inline-block;
+  margin-top: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+/* ------------------------------------------------ */
+
+.whatsapp {
+  position: fixed;
+  bottom: 75px;
+  right: 30px;
+  z-index: 99;
+}
+.whatsapp__text:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: solid transparent;
+  border-width: 10px;
+  top: 50%;
+  right: -20px;
+  transform: translateY(-50%);
+  border-left-color: #292929;
+}
+.whatsapp__link img {
+  height: 50px;
+  transition: all 300ms;
+  -webkit-animation: btn-pulsate 2s ease-out;
+  -webkit-animation-iteration-count: infinite;
+}
+.whatsapp__link img:hover {
+  opacity: 0.8;
+  height: 60px;
+}
+
+@keyframes btn-pulsate {
+  0% {
+    transform: scale(1,1);
+  }
+  25% {
+      transform: scale(1.5,1.5);
+  }
+  50% {
+      transform: scale(1,1);
+  }
+}
+
+/* ------------------------------------------------ */
+
+.footer {
+  background-color: #000;
+}
+.footer__container {
+  color: #fff;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+/* ------------------------------------------------ */
+
+@media (max-width: 1271.7px) {
+  .price-info {
+    padding: 250px 20px;
+  }
+}
+
+@media (max-width: 1062.7px) {
+  .buyback-peoples-cars__column-content {
+    flex-direction: column;
+  }
+  .buyback-peoples-cars__right-item {
+    margin: 20px 0 0 0;
+    text-align: center;
+  }
+  .buyback-peoples-cars__right-item img {
+    width: 50%;
+  }
+}
+
+@media (max-width: 1023.7px){
+  .price-info {
+    padding: 130px 20px;
+  }
+}
+
+@media (max-width: 1049.7px) {
+  .offer__advantages-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 965.7px) {
+  .leave-request {
+    flex-direction: column;
+  }
+  .leave-request__text {
+    margin: 0 0 20px 0;
+  }
+  .leave-request__button {
+    margin: 20px 0 0 0;
+  }
+  .car-estimate__container {
+    padding: 70px 20px 40px;
+  }
+  .buyback-peoples-cars {
+    margin-top: 75px;
+  }
+  .trade-in {
+    margin-top: 75px;
+  }
+  .left-item__button {
+    margin: 20px 0 20px 0;
+    text-align: center;
+  }
+  .buyback-peoples-cars__column-content {
+    align-items: center;
+  }
+}
+
+@media (max-width: 1059.7px) {
+  :root {
+    font-size: 1rem;
+  }
+  .car-buyback__text {
+    padding: 20px 0;
+  }
+  .car-buyback__description {
+    margin-top: 30px;
+  }
+  .description-list {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(3, auto);
+    gap: 35px;
+  }
+  .description-item__text {
+    margin-top: 5px
+  }
+}
+
+@media (max-width: 778.7px) {
+  :root {
+    font-size: 15px;
+  }
+  .car-buyback__container {
+    padding: 90px 20px 25px;
+  }
+  .card__title {
+    font-size: 1.875rem;
+  }
+  .description-list {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 592.7px) {
+  .car-buyback {
+    height: auto;
+  }
+  .car-buyback__title {
+    font-size: 2.5rem;
+  }
+  .car-buyback__text {
+    max-width: 100%;
+    padding: 20px 0 24px;
+  }
+  .car-buyback__description-items {
+    margin-top: 50px;
+  }
+  .description-item:not(:last-child) {
+    margin: 0 0 20px 0;
+  }
+  .offer__card {
+    padding: 30px 40px
+  }
+  .offer__advantages-image img {
+    width: 75px;
+    height: 75px;
+  }
+  .invite-offer {
+    padding: 70px 42px;
+  }
+  .price-info {
+    padding: 70px 20px;
+  }
+}
+
+@media (max-width: 425.7px) {
+  .header__container {
+    justify-content: center;
+  }
+  .header__img {
+    display: none;
+  }
+  .offer__advantages-image img {
+    width: 75px;
+    height: 75px;
+  }
+  .offer__advantages-item {
+    flex-direction: column;
+  }
+  .offer__advantages-image {
+    text-align: center;
+  }
+}
